@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-acmc
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-acmc
+    app.kubernetes.io/part-of: ci10t-786-0019-app
+  name: devfile-sample-acmc
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-acmc
+status:
+  loadBalancer: {}
