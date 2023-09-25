@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-acmc
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/stonesoup_perfscale/ci10t-786-0019-tenant/ci10t-786-0019-app/devfile-sample-acmc@sha256:07f6aa633998aa324453cd4e00605d3e889e4e69f17aa12323d8d9a1b421e6cb
+        name: my-nodejs
+        resources: {}
+status: {}
